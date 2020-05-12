@@ -7,11 +7,11 @@ public class CompositePersonnels implements GroupePersonnels {
 	
 	
 	ArrayList<GroupePersonnels> personnes; 
-	int IdGroupe;
+	//int IdGroupe;
 	
-	public CompositePersonnels(int id)
+	public CompositePersonnels()
 	{
-		this.IdGroupe=id;
+		//this.IdGroupe=id;
 		this.personnes=new ArrayList<GroupePersonnels>();
 	}
 	public void add(GroupePersonnels groupe)
@@ -24,14 +24,14 @@ public class CompositePersonnels implements GroupePersonnels {
 		personnes.remove(groupe);
 	}
 	
+	
 	public void print() {
-		int indice=0;
-		System.out.println(IdGroupe);
-		while (indice<personnes.size())
-		{
-			personnes.get(indice).print();
-			indice++;
-			
-		}
+		for (GroupePersonnels groupePersonnels : personnes)
+			{
+			groupePersonnels.print();
+			}
 	}
-}
+			
+		
+	}
+

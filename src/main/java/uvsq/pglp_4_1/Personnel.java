@@ -2,7 +2,7 @@ package uvsq.pglp_4_1;
 
 import java.util.ArrayList;
 
-public final class Personnel {
+public final class Personnel implements GroupePersonnels {
 	
 	private  String Nom;
 	private  String Prenom;
