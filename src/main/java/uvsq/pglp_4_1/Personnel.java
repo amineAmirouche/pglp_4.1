@@ -18,6 +18,11 @@ public final class Personnel {
 		Date=build.Date;
 		Tel=build.Tel;
 	}
+	
+	public ArrayList<Integer> GetTel()
+	{
+		return this.Tel;
+	}
 	public static class Builder {
 		
 		private final String Nom;
@@ -25,7 +30,7 @@ public final class Personnel {
 		private final java.time.LocalDate Date;
 		
 		private  String Post="inconnue";		
-		private  ArrayList<Integer> Tel=null;
+		private  ArrayList<Integer> Tel=new ArrayList<Integer>();
 		
 		
 		public Builder(String Nom,String Prenom,java.time.LocalDate Date)
@@ -41,13 +46,14 @@ public final class Personnel {
 			return this;
 		}
 		
+		
 		public Personnel build()
 		{
 			return new Personnel(this);
 		}
 	}
 	public void print() {
-		System.out.println("Nom du personnel" + Nom );
+		System.out.println("Nom du personnel" + Nom + Prenom );
 		
 	}
 	
